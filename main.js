@@ -15,7 +15,7 @@ const btnEncriptar = document.getElementById('boton_1');
 const btnDesencriptar = document.getElementById('boton_2');
 const inputResultado = document.getElementById('input2.1');
 const btnCopiar = document.getElementById('boton_3');
-const soloLetras = '^[a-z !ñ]+$';
+const soloLetras = '^[a-z A-Z ]+$';
 
 //Dicho método .addEventListener('') permite asociar múltiples funciones a un mismo evento.
 //El evento DOMContentLoaded es una palabra reservada que nos permite conocer el momento en el que todos los elementos del DOM, es decir, los elementos HTML de un proyecto, están cargados.
@@ -37,11 +37,11 @@ function encriptarTexto(e) {
         let nuevasPalabras = [];
 
         for (let palabra of palabras) {
-            palabra = palabra.replaceAll('e', 'enter');
-            palabra = palabra.replaceAll('i', 'imes');
-            palabra = palabra.replaceAll('a', 'ai');
-            palabra = palabra.replaceAll('o', 'ober');
-            palabra = palabra.replaceAll('u', 'ufat');
+            palabra = palabra.replaceAll('e', 'efe');
+            palabra = palabra.replaceAll('i', 'ifi');
+            palabra = palabra.replaceAll('a', 'afa');
+            palabra = palabra.replaceAll('o', 'ofo');
+            palabra = palabra.replaceAll('u', 'ufu');
 
             nuevasPalabras.push(palabra);
         }
@@ -65,11 +65,11 @@ function desencriptarTexto(e) {
         let nuevasPalabras = [];
 
         for (let palabra of palabras) {
-            palabra = palabra.replaceAll('enter', 'e');
-            palabra = palabra.replaceAll('imes', 'i');
-            palabra = palabra.replaceAll('ai', 'a');
-            palabra = palabra.replaceAll('ober', 'o');
-            palabra = palabra.replaceAll('ufat', 'u');
+            palabra = palabra.replaceAll('efe', 'e');
+            palabra = palabra.replaceAll('ifi', 'i');
+            palabra = palabra.replaceAll('afa', 'a');
+            palabra = palabra.replaceAll('ofo', 'o');
+            palabra = palabra.replaceAll('ufu', 'u');
             nuevasPalabras.push(palabra);
         }
 
